@@ -1,0 +1,73 @@
+.tmt-modal-wrapper {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  opacity: 0;
+  visibility: hidden;
+}
+.tmt-modal-wrapper.show {
+  opacity: 1;
+  visibility: visible;
+}
+.tmt-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.tmt-modal-content {
+  width: 700px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) scale(1.2);
+  transition: all 0.3s ease;
+  opacity: 0;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+}
+.tmt-modal-open .tmt-modal-content {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+.tmt-modal-header {
+  position: relative;
+  padding: 10px 20px;
+  font-family: -webkit-body;
+  border-bottom: 1px solid #333;
+}
+.tmt-modal-close {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.tmt-modal-body {
+  padding: 20px;
+}
+.tmt-modal-footer {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  text-align: right;
+}
+
+body.tmt-modal-open {
+  overflow: hidden;
+}
+.tmt-modal-dialog {
+  position: relative;
+}
+/* modal dai */
